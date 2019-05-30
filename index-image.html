@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <script src="./dist/lightning-web.js"></script>
+</head>
+<body>
+    <script type="module">
+        import MyApp from "./image.js";
+        
+        window.onload = function() {
+            const options = {stage: {w: 1920, h: 1080, clearColor: 0xFF000000}}
+            const app = new MyApp(options);
+            document.body.appendChild(app.stage.getCanvas());
+        }
+    </script>
+</body>
+</html>
