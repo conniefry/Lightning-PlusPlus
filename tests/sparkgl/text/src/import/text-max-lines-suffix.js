@@ -1,8 +1,8 @@
 import Defaults from './_defaults.js';
 
 let max_lines_suffix = [
-    false, // attribute will not set
-    null,  // attribute will set to "null"
+    false, // attribute will not be set
+    null,  // attribute will be set to "null"
     '',
     '...',
     '>>>'
@@ -12,8 +12,7 @@ let def = Defaults.get(),
     space = def.vertical_space || 30,
     x = def.x,
     y = def.y,
-    template = {}
-;
+    template = {};
 
 for (let i in max_lines_suffix)
 {

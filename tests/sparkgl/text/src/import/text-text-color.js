@@ -1,7 +1,7 @@
 import Defaults from './_defaults.js';
 
 let text_colors = [
-    false,      // attribute will not set
+    false,      // attribute will not be set
     0xff0000ff,
     0xff00ff00,
     0xffffff00
@@ -14,8 +14,7 @@ let def = Defaults.get(),
     template = {}
 ;
 
-for (let i in text_colors)
-{
+for (let i in text_colors) {
     let tpl = {
         x: x,
         y: y,
@@ -24,8 +23,7 @@ for (let i in text_colors)
         }
     };
 
-    if (text_colors[i] !== false)
-    {
+    if (text_colors[i] !== false) {
         tpl.text.textColor = text_colors[i];
     }
 

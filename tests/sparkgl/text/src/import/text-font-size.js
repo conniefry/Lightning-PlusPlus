@@ -6,17 +6,15 @@ let def = Defaults.get(),
     space = def.vertical_space || 30,
     x = def.x,
     y = def.y,
-    template = {}
-;
+    template = {};
 
-for (let i in font_sizes)
-{
+for (let i in font_sizes) {
     template['Text_' + i] = Defaults.applyToText({
         x: x,
         y: y,
         text: {
             fontSize: font_sizes[i],
-            text:     def.text.text,
+            text: def.text.text,
             maxLines: 1
         }
     }, [

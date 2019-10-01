@@ -3,9 +3,7 @@ import Defaults from './_defaults.js';
 let def = Defaults.get(),
     x = def.x,
     y = def.y,
-    template = {}
-;
-
+    template = {};
 
 let values = [{
     textAlign: 'left'
@@ -21,28 +19,22 @@ let values = [{
     cutEy: 250
 }];
 
-
 /*
  * Set common values
  */
-
-for (let i in values)
-{
-    values[i].text          = def.text.longText;
+for (let i in values) {
+    values[i].text = def.text.longText;
     values[i].wordWrapWidth = 400;
-    values[i].lineHeight    = 60;
-    values[i].offsetY       = -45;
-    values[i].paddingLeft   = -15;
-    values[i].paddingRight  = 500;
+    values[i].lineHeight = 60;
+    values[i].offsetY = -45;
+    values[i].paddingLeft = -15;
+    values[i].paddingRight = 500;
 }
-
 
 /*
  * Test with maxLines
  */
-
-for (let i in values)
-{
+for (let i in values) {
     let tpl = {
         x: x,
         y: y,
@@ -65,11 +57,10 @@ for (let i in values)
  * Test without maxLines
  */
 
-x  = def.x;
+x = def.x;
 y += 300;
 
-for (let i in values)
-{
+for (let i in values) {
     let tpl = {
         x: x,
         y: y,
@@ -84,6 +75,5 @@ for (let i in values)
 
     x += 450;
 }
-
 
 export default template;

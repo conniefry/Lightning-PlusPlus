@@ -1,11 +1,12 @@
 import Defaults from './_defaults.js';
 
 let font_styles = [
-    false, // attribute will not set
+    false, // attribute will not be set
     'normal',
     'italic',
     'bold',
-    'italic bold'
+    'italic bold',
+    'oblique deg45'
 ];
 
 let def = Defaults.get(),
@@ -14,8 +15,7 @@ let def = Defaults.get(),
     template = {}
 ;
 
-for (let i in font_styles)
-{
+for (let i in font_styles) {
     let tpl = {
         x: x,
         y: y,
@@ -24,8 +24,7 @@ for (let i in font_styles)
         }
     };
 
-    if (font_styles[i] !== false)
-    {
+    if (font_styles[i] !== false) {
         tpl.text.fontStyle = font_styles[i];
     }
 

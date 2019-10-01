@@ -6,18 +6,16 @@ let def = Defaults.get(),
     space = def.vertical_space || 30,
     x = def.x,
     y = def.y,
-    template = {}
-;
+    template = {};
 
-for (let i in values)
-{
+for (let i in values) {
     template['Text_1_' + i] = Defaults.applyToText({
         x: x,
         y: y,
         text: {
-            text:     def.text.text,
+            text: def.text.text,
             maxLines: 1,
-            cutSx:    values[i]
+            cutSx: values[i]
         }
     }, [
         'fontFace',
@@ -28,18 +26,16 @@ for (let i in values)
     y += (def.text.fontSize || space) + space;
 }
 
-
 let max_lines = 3;
 
-for (let i in values)
-{
+for (let i in values) {
     template['Text_2_' + i] = Defaults.applyToText({
         x: x,
         y: y,
         text: {
-            text:     def.text.longText,
+            text: def.text.longText,
             maxLines: max_lines,
-            cutSx:    values[i]
+            cutSx: values[i]
         }
     }, [
         'fontFace',
@@ -50,6 +46,5 @@ for (let i in values)
 
     y += (def.text.fontSize || space) * max_lines + space;
 }
-
 
 export default template;

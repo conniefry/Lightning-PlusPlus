@@ -1,3 +1,7 @@
+# General
+There are few different tests defined in App.js. Only one can be imported at a time. 
+Uncomment one of the "import" dirs and build a bundle.
+
 # Building for Spark
 ```
 npm i

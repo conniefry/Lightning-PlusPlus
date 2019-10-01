@@ -1,8 +1,7 @@
 import Defaults from './_defaults.js';
 
 let def = Defaults.get(),
-    font_size = def.text.fontSize || 36
-;
+    font_size = def.text.fontSize || 36;
 
 
 let values = [
@@ -11,12 +10,10 @@ let values = [
       font_size / 1.5
 ];
 
-
 let space = def.vertical_space || 30,
     x = def.x,
     y = def.y,
-    template = {}
-;
+    template = {};
 
 for (let i in values)
 {
@@ -36,7 +33,6 @@ for (let i in values)
 
     y += font_size + space;
 }
-
 
 let max_lines = 3;
 
@@ -59,6 +55,5 @@ for (let i in values)
 
     y += font_size * max_lines + space;
 }
-
 
 export default template;

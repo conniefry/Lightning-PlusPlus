@@ -7,27 +7,25 @@ let def = Defaults.get(),
 
 let line_heights = [
     0.5 * font_size,
-      1 * font_size,
-      2 * font_size,
-      3 * font_size,
-      4 * font_size
+    1 * font_size,
+    2 * font_size,
+    3 * font_size,
+    4 * font_size
 ];
 
 
 let space = def.vertical_space || 30,
     x = def.x,
     y = def.y,
-    template = {}
-;
+    template = {};
 
-for (let i in line_heights)
-{
+for (let i in line_heights) {
     template['Text_' + i] = Defaults.applyToText({
         x: x,
         y: y,
         text: {
-            fontSize:   font_size,
-            text:       def.text.longText,
+            fontSize: font_size,
+            text: def.text.longText,
             lineHeight: line_heights[i]
         }
     }, [

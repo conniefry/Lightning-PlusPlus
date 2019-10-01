@@ -1,7 +1,7 @@
 import Defaults from './_defaults.js';
 
 let values = [
-    false, // attribute will not set
+    false, // attribute will not be set
     'alphabetic',
     'top',
     'hanging',
@@ -13,7 +13,7 @@ let values = [
 let def = Defaults.get(),
     text = 'Wqfegl',
     font_size = def.text.fontSize || 36,
-    text_width_with_space = 6 /* quantity of chars */ * (0.69 * font_size),
+    text_width_with_space = 6 /* number of chars */ * (0.69 * font_size),
     x = def.x,
     y = def.y,
     template = {

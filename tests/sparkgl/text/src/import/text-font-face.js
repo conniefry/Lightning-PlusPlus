@@ -11,17 +11,15 @@ let font_faces = [
 let def = Defaults.get(),
     x = def.x,
     y = def.y,
-    template = {}
-;
+    template = {};
 
-for (let i in font_faces)
-{
+for (let i in font_faces) {
     template['Text_' + i] = Defaults.applyToText({
         x: x,
         y: y,
         text: {
             fontFace: font_faces[i],
-            text:     def.text.text
+            text: def.text.text
         }
     }, [
         'fontSize',

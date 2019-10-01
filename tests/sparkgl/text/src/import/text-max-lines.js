@@ -6,16 +6,14 @@ let def = Defaults.get(),
     space = def.vertical_space || 30,
     x = def.x,
     y = def.y,
-    template = {}
-;
+    template = {};
 
-for (let i in max_lines)
-{
+for (let i in max_lines) {
     template['Text_' + i] = Defaults.applyToText({
         x: x,
         y: y,
         text: {
-            text:     def.text.longText,
+            text: def.text.longText,
             maxLines: max_lines[i]
         }
     }, [
