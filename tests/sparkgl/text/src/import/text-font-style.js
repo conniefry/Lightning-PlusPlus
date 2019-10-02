@@ -6,7 +6,7 @@ let font_styles = [
     'italic',
     'bold',
     'italic bold',
-    'oblique deg45'
+    'oblique 45deg'
 ];
 
 let def = Defaults.get(),
