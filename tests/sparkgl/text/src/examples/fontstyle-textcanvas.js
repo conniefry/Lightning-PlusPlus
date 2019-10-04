@@ -16,17 +16,19 @@ px.import({
     let basePackageUri = px.getPackageBaseFilePath();
     let promises = [];
 
-    let fontUrl = basePackageUri + "/../../static/fonts/Roboto-Regular.ttf";
-    let fontUrl2 = basePackageUri + "/../../static/fonts/DejaVuSans.ttf";
+    let fontUrl = basePackageUri + "/../../static/fonts/Roboto-Italic.ttf";
+    let fontUrl2 = basePackageUri + "/../../static/fonts/Roboto-Regular.ttf";
 
-    let fontResource1 = sparkscene.create({t: "fontResource", url: fontUrl, fontStyle: "oblique 45deg"});
-    let fontResource2 = sparkscene.create({t: "fontResource", url: fontUrl2, fontStyle: "italic"});
-    let fontResource3 = sparkscene.create({t: "fontResource", url: fontUrl, fontStyle: "normal"});
-    let fontResource4 = sparkscene.create({t: "fontResource", url: fontUrl, fontStyle: "bold"});
+
+    let fontResource1 = sparkscene.create({t: "fontResource", url: fontUrl, fontStyle: "normal"}); // Ignores normal, takes italic
+    let fontResource2 = sparkscene.create({t: "fontResource", url: fontUrl2, fontStyle: "oblique 45deg"}); // Makes it oblique 45 degree
+    let fontResource3 = sparkscene.create({t: "fontResource", url: fontUrl2, fontStyle: "Italic"}); // Simulates "italic"
+    let fontResource4 = sparkscene.create({t: "fontResource", url: fontUrl2, fontStyle: "bold"}); // Ignores bold
 
     promises.push(fontResource1.ready);
     promises.push(fontResource2.ready);
     promises.push(fontResource3.ready);
+    promises.push(fontResource4.ready);
 
     let w = 700;
     let h = 300;
@@ -66,25 +68,23 @@ px.import({
 
                 canvas.fillStyle = 0xFFCC66FF; // Spark colors
                 canvas.font = fontResource1;
-                measure = canvas.measureText(text);
-                console.log ('Width of "' + text + '" is ' + measure.width);
                 canvas.fillText(text, 0, 80);
+                console.log("Font style for fontResource1 is " + fontResource1.fontStyle);
 
                 canvas.fillStyle = 0XFF00FFFF;
                 canvas.font = fontResource2;
-                measure = canvas.measureText(text);
-                console.log ('Width of "' + text + '" is ' + measure.width);
                 canvas.fillText(text, 0, 160);
+                console.log("Font style for fontResource2 is " + fontResource2.fontStyle);
 
                 canvas.fillStyle = 0xFFCC99FF;
                 canvas.font = fontResource3;
-                measure = canvas.measureText(text);
-                console.log ('Width of "' + text + '" is ' + measure.width);
                 canvas.fillText(text , 0, 240);
+                console.log("Font style for fontResource3 is " + fontResource3.fontStyle);
 
                 canvas.fillStyle = 0xFFCC55FF;
                 canvas.font = fontResource4;
                 canvas.fillText(text , 0, 290);
+                console.log("Font style for fontResource4 is " + fontResource4.fontStyle);
 
             canvas.globalAlpha = 1.5;
 
