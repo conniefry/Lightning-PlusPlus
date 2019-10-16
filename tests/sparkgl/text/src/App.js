@@ -8,6 +8,7 @@ import test_template from './import/text-cut-s-y.js';
 import test_template from './import/text-font-face.js';
 import test_template from './import/text-font-size.js';
 import test_template from './import/text-font-style.js';
+import test_template from './import/text-font-shadow-highlight.js';
 import test_template from './import/text-line-height.js';
 import test_template from './import/text-max-lines.js';
 import test_template from './import/text-max-lines-suffix.js';
@@ -21,7 +22,7 @@ import test_template from './import/text-text-baseline.js';
 import test_template from './import/text-text-color.js';
 import test_template from './import/text-word-wrap-width.js';
 */
-import test_template from './import/text-word-wrap-width.js';
+import test_template from './import/text-font-shadow-highlight.js';
 
 export default class MyApp extends ux.App {
     static getFonts() {
