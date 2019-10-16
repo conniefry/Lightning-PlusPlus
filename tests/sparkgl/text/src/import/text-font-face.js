@@ -1,10 +1,9 @@
 import Defaults from './_defaults.js';
 
 let font_faces = [
-    'RobotoBold',
     'RobotoRegular',
-    'DancingScriptRegular',
-    'XFINITYSansTTMedium',
+    'RobotoItalic',
+    'RobotoBold',
     'IndieFlower'
 ];
 

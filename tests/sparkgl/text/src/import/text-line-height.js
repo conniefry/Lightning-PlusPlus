@@ -1,9 +1,7 @@
 import Defaults from './_defaults.js';
 
-let def = Defaults.get(),
-    font_size = def.text.fontSize || 36
-;
-
+let def = Defaults.get();
+let font_size = def.text.fontSize || 36;
 
 let line_heights = [
     0.5 * font_size,
@@ -13,11 +11,11 @@ let line_heights = [
     4 * font_size
 ];
 
-
-let space = def.vertical_space || 30,
-    x = def.x,
-    y = def.y,
-    template = {};
+let   space = def.vertical_space || 30
+    , x = def.x
+    , y = def.y
+    , template = {}
+    ;
 
 for (let i in line_heights) {
     template['Text_' + i] = Defaults.applyToText({
